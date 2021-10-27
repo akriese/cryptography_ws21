@@ -17,10 +17,10 @@ class ShiftCipher():
         return self.key
 
     def encode(self, message):
-        return "".join([ascii_mod_shift(c, self.key, 26) for c in message])
+        return "".join([ascii_mod_shift(c, self.key) for c in message])
 
     def decode(self, message):
-        return "".join([ascii_mod_shift(c, -self.key, 26) for c in message])
+        return "".join([ascii_mod_shift(c, -self.key) for c in message])
 
 
 
