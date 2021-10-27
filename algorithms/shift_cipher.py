@@ -1,6 +1,6 @@
 import random
 
-def ascii_mod_shift(c, k, mod):
+def ascii_mod_shift(c, k, mod=26):
     if c.islower():
         return chr(ord('a') + (ord(c) + k - ord('a')) % mod)
     elif c.isupper():
