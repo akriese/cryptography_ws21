@@ -1,4 +1,4 @@
-from shift_cipher import str2ord, ord2str
+from utils import str2ord, ord2str
 from itertools import cycle
 
 class VigenereCipher():
