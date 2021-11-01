@@ -18,12 +18,10 @@ def ord2str(s):
 
 class ShiftCipher():
     def __init__(self, key=None):
-        self.key = key
+        self.generate(key)
 
-    def generate(self):
-        if self.key is None:
-            self.key = random.randint(0, 25)
-        return self.key
+    def generate(self, key):
+        self.key = key or random.randint(0, 25)
 
     def encode(self, message):
         return [(c + self.key) % 26 for c in message]
